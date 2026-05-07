@@ -1,0 +1,335 @@
+:root {
+    --primary: #f0660d;
+    --primary-dark: #d4560a;
+    --white: #f0660d;
+    --text-main: #1F2937;
+    /* ألوان الأقسام الـ 11 كما في الصورة */
+    --fresh-color: #ffe0b2;
+    --smoothie-color: #ffcc80;
+    --refresh-color: #ffb74d;
+    --milkshake-color: #ffa726;
+    --local-color: #ff9800;
+    --icecream-color: #fb8c00;
+    --grilled-color: #f57c00;
+    --burger-color: #f57c00;
+    --agashi-color: #f57c00;
+    --potatoes-color: #f57c00;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #ffffff;
+    direction: rtl;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo-img { height: 60px; }
+.btn-primary { background: var(--primary); color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+.btn-primary:hover { background: var(--primary-dark); }
+
+/* HERO SECTION */
+.hero { display: flex; justify-content: center; padding: 40px 20px; }
+.hero-container {
+    width: 100%; max-width: 1200px; min-height: 500px;
+    background: var(--primary);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 60px;
+}
+
+.bg-text-back {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    font-size: 15vw; font-weight: 900; color: rgba(255, 255, 255, 0.07);
+    z-index: 1; pointer-events: none; white-space: nowrap;
+}
+
+.hero-content { z-index: 3; color: white; max-width: 500px; }
+.hero-content h1 { font-size: 48px; font-weight: 900; margin-bottom: 15px; line-height: 1.2; }
+.hero-content p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
+.fresh-word { font-size: 20px; font-weight: 700; color: var(--primary); background: #fff; padding: 4px 18px; border-radius: 8px; display: inline-block; margin-bottom: 15px; }
+
+.hero-visual { z-index: 4; flex: 1; display: flex; justify-content: flex-end; }
+.juice-img { width: 100%; max-width: 380px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3)); transform: rotate(-5deg); transition: 0.5s; }
+.juice-img:hover { transform: rotate(0deg) scale(1.05); }
+
+/* MENU CATEGORIES */
+.section-title { text-align: center; margin: 60px 0 30px; font-size: 32px; font-weight: 900; color: var(--primary); }
+.menu-category { padding: 40px 30px; border-radius: 30px; margin: 20px auto; max-width: 1100px; color: #fff; }
+.menu-category h2 { margin-bottom: 25px; font-size: 26px; border-right: 5px solid rgba(255,255,255,0.5); padding-right: 15px; }
+.menu-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.menu-item { background: rgba(255, 255, 255, 0.12); border-radius: 20px; padding: 20px; text-align: center; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+.menu-item:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.2); }
+.menu-item img { width: 140px; height: 140px; object-fit: contain; margin-bottom: 15px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); }
+.menu-item h3 { font-size: 18px; margin-bottom: 8px; }
+.menu-item p { font-weight: 700; font-size: 15px; }
+
+/* ألوان الأقسام الـ 11 */
+.menu-fresh { background: var(--fresh-color); }
+.menu-smoothie { background: var(--smoothie-color); }
+.menu-refresh { background: var(--refresh-color); }
+.menu-milkshake { background: var(--milkshake-color); }
+.menu-local { background: var(--local-color); }
+.menu-icecream { background: var(--icecream-color); }
+.menu-grilled { background: var(--grilled-color); }
+.menu-burger { background: var(--burger-color); }
+.menu-agashi { background: var(--agashi-color); }
+.menu-potatoes { background: var(--potatoes-color); }
+
+/* HERO BUTTONS */
+.hero-buttons { display: flex; gap: 15px; }
+.btn-order-now { background: #111; color: #fff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; }
+.btn-white-outline { border: 2px solid #fff; color: #fff; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-container { flex-direction: column; text-align: center; padding: 40px 20px; }
+    .hero-visual { justify-content: center; margin-top: 30px; }
+    .hero-buttons { justify-content: center; }
+    .juice-img { max-width: 280px; }
+}
+
+/* الهيدر */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ff6f00;
+    color: #fff;
+}
+
+.logo-img {
+    height: 90px;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: #e47011;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* الهيرو */
+.hero {
+    position: relative;
+    padding: 50px 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-text-back {
+    position: absolute;
+    font-size: 100px;
+    color: rgba(0,0,0,0.05);
+    font-weight: 900;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.fresh-word {
+    color: #0000005a;
+    font-weight: 700;
+}
+
+.hero-buttons .btn-order-now {
+    background-color: #ff6f00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hero-visual img.juice-img {
+    width: 300px;
+    max-width: 100%;
+}
+
+/* الأقسام والقوائم */
+.menu-category {
+    padding: 40px 20px;
+}
+
+.menu-category h2 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* عناصر القائمة */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: #e6ac6b;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 15px;
+    flex: 1 1 calc(25% - 20px);
+    max-width: 250px;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+/* الصور */
+.menu-item img {
+    width: 150px;      /* نفس حجم صور قسم خاص 50 فاكهة */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* اسم العنصر */
+.menu-item h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* السعر */
+.menu-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* استجابة الموبايل */
+@media (max-width: 1024px) {
+    .menu-item {
+        flex: 1 1 calc(33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        flex: 1 1 100%;
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        margin-right: 0;
+    }
+
+}
+
+/* Reset مهم */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== FOOTER ====== */
+.main-footer {
+    background-color: #4a6741;
+    color: #ffffff;
+    padding: 60px 5% 20px;
+    direction: rtl;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: right;
+}
+
+.footer-box h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #f2e27a;
+}
+
+.footer-box p, .footer-box a {
+    font-size: 15px;
+    color: #e0e0e0;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.footer-box a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.signature { font-weight: bold; color: #f2e27a; }
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1024px) { .menu-item { flex: 1 1 calc(33% - 20px); } }
+@media (max-width: 768px) { 
+    .menu-item { flex: 1 1 calc(50% - 20px); }
+    .footer-container { grid-template-columns: 1fr; text-align: center; }
+}
+@media (max-width: 480px) { .menu-item { flex: 1 1 100%; } }
+
+/* أضف هذا الكود في آخر ملف الـ CSS */
+.menu-special { 
+    background-color: #fff3e0 !important; /* هنا ضع اللون الذي تريده لقائمة خاص 50 فاكهة */
+}
